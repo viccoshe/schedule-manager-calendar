@@ -1,0 +1,25 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+
+        i{
+            font-size: 50px;
+        }
+    }
+
+    .createButton {
+        margin: 13px;
+        background-color: #fff;
+        color: #000;
+        //text-transform: capitalize;
+        display: flex;
+        align-items: center;
+
+        i {
+            font-size: 27px;
+        }
+    }
+}

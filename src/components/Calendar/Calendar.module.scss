@@ -1,0 +1,99 @@
+@import '../utiles/variables';
+
+.calendarWrapper {
+
+    .calendarHeader {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid grey;
+
+        .calenderMonthBtns {
+            border: 1px solid gray;
+            width: 15rem;
+            color: #000;
+            font-size: 1.5em;
+            margin: 10px;
+    
+            button {
+                background-color: transparent;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                border: 1px solid $grey;
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover {
+                    background-color: $grey;
+                }
+                i {
+                    color: #000;
+                }
+            }
+        }
+
+        .todayBtn {
+            background-color: transparent;
+            border: 1px solid $darkGrey;
+            padding: 5px 10px;
+            border-radius: 10%;
+            align-self: center;
+            justify-self: end;
+
+            &:hover {
+                background-color: $grey;
+            }
+        }
+
+    
+        .options {
+            align-self: center;
+            margin: 10px;
+            
+            select {
+                appearance: none;
+                background: transparent;
+                border: 1px solid $darkGrey;
+                padding: 0.5em 1em;
+                margin: 0;
+                width: 100%;
+                font-family: inherit;
+                font-size: inherit;
+                cursor: inherit;
+                line-height: inherit;
+                outline: none;
+            }
+        }
+    }
+
+    .weekdays {
+        color: grey;
+        text-transform: uppercase;
+        margin: 0 1rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .calendar {
+        margin: 0.5rem 1rem;
+        border: 1px solid $grey;
+        color: #000;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+        .calendarCell {
+            border: 1px solid $grey;
+            //width: 5rem;
+            height: 8rem;
+
+            .noteDot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: blue;
+            }
+        }
+    }
+}

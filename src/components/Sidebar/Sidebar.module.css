@@ -1,0 +1,21 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.sidebar .logo i {
+  font-size: 50px;
+}
+.sidebar .createButton {
+  margin: 13px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+.sidebar .createButton i {
+  font-size: 27px;
+}/*# sourceMappingURL=Sidebar.module.css.map */

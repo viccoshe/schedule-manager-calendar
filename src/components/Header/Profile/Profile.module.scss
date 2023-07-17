@@ -1,0 +1,16 @@
+.profile {
+    border: 1px solid grey;
+    width: 9rem;
+    height: 3rem;
+    margin: 10px 20px;
+    display: flex;
+    align-items: center;
+
+    .avatar {
+        border: 1px solid grey;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+    }
+}

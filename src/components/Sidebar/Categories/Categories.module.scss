@@ -1,0 +1,23 @@
+.categories {
+    border: 1px solid #fff;
+    width: 15rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 5px;
+
+    .catWrapper {
+        display: flex;
+        margin: 5px;
+    }
+
+    .addCategory {
+        color: #fff;
+        padding: 0;
+
+        &:hover {
+            color: grey;
+        }
+    }
+}

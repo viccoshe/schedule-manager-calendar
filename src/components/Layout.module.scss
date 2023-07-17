@@ -1,0 +1,23 @@
+.layout {
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+
+    .sidebarWrapper {
+        height: 100vh;
+        width: 18rem;
+        background-color: #151515;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;   
+    }
+
+    .main {
+        display: flex;
+        border: 1px solid green;
+        flex-flow: column nowrap;
+        width: 100%;
+    }
+}

@@ -1,0 +1,22 @@
+.monthCalendar {
+  border: 1px solid #fff;
+  width: 15rem;
+  height: 15rem;
+  margin: 15px;
+}
+.monthCalendar .monthHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+}
+.monthCalendar .monthHeader .monthsButtons button {
+  padding: 0;
+}
+.monthCalendar .monthHeader .monthsButtons button:first-child {
+  margin-right: 13px;
+}
+.monthCalendar .monthHeader .monthsButtons button i {
+  font-size: 20px;
+  color: #fff;
+}/*# sourceMappingURL=MonthCalendar.module.css.map */
