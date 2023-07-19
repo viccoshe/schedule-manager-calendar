@@ -1,21 +1,12 @@
-import { useState, useContext, createContext } from "react";
+import { useState, createContext} from "react";
 import Layout from "./components/Layout";
-import { format, parse, startOfToday } from 'date-fns';
 import { Provider } from "react-redux";
 import { store } from "./store/store";
-
-export const CurrentMonthContext = createContext(format(startOfToday(), 'MMM-yyyy'));
-export const FirsDayMonthContext = createContext(null);
 export const NotesContext = createContext([]);
 export const CategoriesContext = createContext([]);
 export const FilterCatContext = createContext([]);
 
-
 function App() {
-  //let today = startOfToday();
-
-  const [ currentMonth, setCurrentMonth ] = useState(format(startOfToday(), 'MMM-yyyy'));
-  const firstDayCurrentMonth = parse(currentMonth, 'MMM-yyyy', new Date());  
   const [ categories, setCategories ] = useState (
     [
       {
@@ -50,7 +41,7 @@ function App() {
       imageUrl: 'https://www.freeiconspng.com/thumbs/profile-icon-png/am-a-19-year-old-multimedia-artist-student-from-manila--21.png',
       category: 'Birthday',
       title: 'Meeting',
-      startDateTime: '2023-07-21T13:00',
+      startDateTime: '2023-07-25T13:00',
       endDateTime: '2023-07-21T14:30',
 
     },
@@ -86,7 +77,7 @@ function App() {
       imageUrl: 'https://www.freeiconspng.com/thumbs/profile-icon-png/am-a-19-year-old-multimedia-artist-student-from-manila--21.png',
       category: 'Birthday',
       title: 'Meeting',
-      startDateTime: '2023-07-21T13:00',
+      startDateTime: '2023-07-11T13:00',
       endDateTime: '2023-07-21T14:30',
 
     },
@@ -102,6 +93,9 @@ function App() {
   ]);
 
   const [ filteredCategories, setFilteredCategory ] = useState([]);
+  console.log(filteredCategories)
+
+
 
 
   return (
@@ -110,11 +104,7 @@ function App() {
       <FilterCatContext.Provider value={{ filteredCategories, setFilteredCategory }}>
           <CategoriesContext.Provider value = {{ categories, setCategories }}>
             <NotesContext.Provider value={{ notes, setNotes }}>
-              <CurrentMonthContext.Provider value={{ currentMonth, setCurrentMonth }}>
-                  <FirsDayMonthContext.Provider value={{ firstDayCurrentMonth }}>
                     <Layout />
-                  </FirsDayMonthContext.Provider>
-                </CurrentMonthContext.Provider>
               </NotesContext.Provider>
           </CategoriesContext.Provider>
         </FilterCatContext.Provider>

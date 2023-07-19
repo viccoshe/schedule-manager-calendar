@@ -2,11 +2,12 @@ import styles from "./Calendar.module.scss";
 import GetMonthButtons from "../UI/getMonthButtons";
 import { eachDayOfInterval, parse, endOfMonth, endOfWeek, format, formatDistance, isSameMonth, startOfMonth, startOfToday, startOfWeek, subDays, isEqual, isToday, isWeekend, parseISO, isSameDay } from 'date-fns';
 import { useContext, useEffect, useState } from "react";
-import { CurrentMonthContext, FirsDayMonthContext, NotesContext } from "../../App";
+import { NotesContext } from "../../App";
 import { setCurrentMonth } from "../../store/features/currentMonthSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const Calendar = () => {
+
     const currentMonth = useSelector(state => state.monthSetter.currentMonth);
     const dispatch = useDispatch();
     

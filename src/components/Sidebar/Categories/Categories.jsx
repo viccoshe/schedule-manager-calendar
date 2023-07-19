@@ -6,8 +6,8 @@ const Categories = () => {
     const { notes, setNotes } = useContext(NotesContext);
     const { categories, setCategories } = useContext(CategoriesContext);
     const { filteredCategories, setFilteredCategory } = useContext(FilterCatContext);
-    const [ catArray, setCatArray ] = useState([]);
 
+    //console.log(categories)
     const filterNotesCategory = () => {
         let filter = [];
         if(filteredCategories.length > 0) {
@@ -39,8 +39,6 @@ const Categories = () => {
             }
             setFilteredCategory(filter);  
         }              
-        
-        //debugger
     }
 
 
@@ -50,7 +48,7 @@ const Categories = () => {
             {categories.length > 0 &&
                 categories.map(cat => {
                     return (
-                        <div className={styles.catWrapper}>
+                        <div key={cat.color} className={styles.catWrapper}>
                             <div className={styles.catWrapper}>
                                 <input
                                     name="categories"
@@ -62,7 +60,7 @@ const Categories = () => {
                                 />
                                 <label
                                     style={{ color: cat.color }}
-                                    for={cat.cat}>
+                                    htmlFor={cat.cat}>
                                     {cat.cat}
                                 </label>
                             </div>

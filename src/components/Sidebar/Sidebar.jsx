@@ -3,14 +3,17 @@ import MonthCalendar from "./MonthCalendar/MonthCalendar";
 import UpcomingEvents from "./UpcomingEvents/UpcomingEvents";
 import styles from "./Sidebar.module.scss";
 
-const Sidebar = () => {
+const Sidebar = ({ modalNote, setModalNote }) => {
     return ( 
         <div className={styles.sidebar}>
             <div className={styles.logo}>
                 <i className='bx bx-spa'></i>
                 TO-DOist
             </div>
-            <button className={styles.createButton}>
+            <button 
+                onClick={() => setModalNote(true)}
+                className={styles.createButton}
+            >
                 <i className='bx bx-calendar-plus'></i>
                  + create
             </button>

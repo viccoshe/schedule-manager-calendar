@@ -13,7 +13,7 @@ const UpcomingEvents = () => {
         if (notes.length > 0){
             filteredNotes = notes.filter((n, i) =>{
                 if (isFuture(parseISO(n.startDateTime))){
-                    return closestTo(today, notes[i].startDateTime)
+                    return closestTo(parseISO(today), parseISO(notes[i].startDateTime)) //return closestTo(today, notes[i].startDateTime)
                 }
             })
         }
@@ -25,7 +25,7 @@ const UpcomingEvents = () => {
         <div className={styles.upcomingEvents}>
             <h5>UpcomingEvents</h5>
             {upcomingNotes.length > 0 && upcomingNotes.map(note => {
-                return <div>{note.title}</div>
+                return <div key={note.startDateTime}>{note.title}</div>
             })}
         </div>
      );

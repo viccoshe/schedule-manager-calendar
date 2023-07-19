@@ -5,7 +5,6 @@ import { add,
         parse, 
         startOfToday, 
         sub } from 'date-fns';
-import { CurrentMonthContext, FirsDayMonthContext } from "../../App";
 import { useSelector, useDispatch } from 'react-redux'
 import { setNextMonth, setPreviousMonth } from "../../store/features/currentMonthSlice";
 
